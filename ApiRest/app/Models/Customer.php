@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Customer extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+
+    ];
+
+    /**
+    * Get all of the comments for the Customer
+    *
+    * @return \Illuminate\Database\Eloquent\Relations\HasMany
+    */
+    public function invoices()
+    {
+        return $this->hasMany(Invoice::class);
+    }
 }
