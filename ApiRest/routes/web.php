@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-//Importamos todos los controladores que vamos a utilizar
-use App\Http\Controllers\UsuariosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +16,3 @@ use App\Http\Controllers\UsuariosController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/usuarios', [UsuariosController::class, 'index']);
-
